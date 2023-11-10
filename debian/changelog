@@ -1,5 +1,109 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-deprecation (2.1.0-2) unstable; urgency=low
 
-  * Initial release
+  [ Debian Janitor ]
+  * Set field Upstream-Contact in debian/copyright.
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Ondřej Nový ]
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sandro Tosi ]
+  * debian/control
+    - use proper team name and email address
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 31 Aug 2021 00:37:49 -0400
+
+python-deprecation (2.1.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Ondřej Kobližek ]
+  * New upstream release
+  * d/control:
+    - Bump debhelper compat level to 13
+    - Update mailing-list address in Maintainer
+    - Add Rules-Requires-Root
+    - Bump standards version to 4.5.0 (no changes)
+  * d/upstream/metadata: Add Bug-Database field
+  * Change my email address
+
+ -- Ondřej Kobližek <kobla@debian.org>  Fri, 15 May 2020 06:27:18 +0200
+
+python-deprecation (2.0.7-1) unstable; urgency=medium
+
+  * Bump watchfile version to 4
+  * New upstream release
+  * d/copyright: actualize my copyright years
+  * d/control: Wrap and sort
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Tue, 13 Aug 2019 07:56:25 +0200
+
+python-deprecation (2.0.6-2) unstable; urgency=medium
+
+  * d/control: Drop the Python 2 module
+  * d/rules: Drop the Python 2 module
+  * Bump standards version to 4.4.0 (no changes)
+  * Bump debhelper compat level to 12 and use debhelper-compat
+  * d/tests: Add the Python 3 module test
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Tue, 16 Jul 2019 15:48:01 +0200
+
+python-deprecation (2.0.6-1) unstable; urgency=medium
+
+  * New upstream release
+  * Convert git repository from git-dpm to gbp layout
+  * Bump standards version to 4.1.4 (no changes needed)
+
+ -- Ondřej Nový <onovy@debian.org>  Sat, 29 Sep 2018 11:16:45 +0200
+
+python-deprecation (2.0.5-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control: Standards version is 4.1.5 now (no changes needed)
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Wed, 25 Jul 2018 05:36:21 +0200
+
+python-deprecation (2.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control: Remove deprecated X-Python{3}-Version fields
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Mon, 14 May 2018 07:11:17 +0200
+
+python-deprecation (2.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control: Standards version is 4.1.4 now (no changes needed)
+  * d/upstream/metadata: add quotes to fix yaml syntax
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Fri, 13 Apr 2018 13:34:55 +0200
+
+python-deprecation (2.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Ondřej Kobližek ]
+  * New upstream release
+  * Add a d/upstream/metadata file
+  * d/copyright: Add Ondřej Nový for Debian part
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Thu, 22 Feb 2018 12:01:53 +0100
+
+python-deprecation (1.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update debhelper compat level to 11
+  * d/control: Standards version is 4.1.3 now (remove trailing whitespaces)
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Tue, 06 Feb 2018 13:05:30 +0100
+
+python-deprecation (1.0.1-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #870723)
+
+ -- Ondřej Kobližek <koblizeko@gmail.com>  Fri, 04 Aug 2017 10:50:48 -0400
