@@ -1,0 +1,461 @@
+commit c2c1e6b4360b0d1c4de48a61187a2173321ec7b9
+Author: Dominic Davis-Foster <dominic@davis-foster.co.uk>
+Date:   Mon Apr 20 15:16:21 2020 +0100
+
+    Added line `@functools.wraps(method)` to the `fail_if_not_removed` decorator, which should fix https://github.com/briancurtin/deprecation/issues/42 (#48)
+
+commit fa21c6ecc23e660faefc4c0795af5097711ae444
+Author: ashwin <52176187+aakum03@users.noreply.github.com>
+Date:   Tue Feb 4 15:11:21 2020 -0500
+
+    Allow removed_in to be a date (#47)
+    
+    * Allowed removed_in to be a date (datetime.date)
+    
+    * added 9 more test cases(for date); passed local tests
+    
+    * removed TODOs
+    
+    * Fixed errors and formatted lines
+    
+    * removed unecessary condition on ln 168
+    
+    * made requested changes to docstring
+
+commit 264e8cd469cdcfc793afedb80d224f48d350a360
+Author: NODA, Kai <nodakai@gmail.com>
+Date:   Fri Jan 17 23:40:28 2020 +0800
+
+    Remove an invalid escape sequence \s from pydoc (#45)
+
+commit 442a041c51a1ce3a733ac7231d71330c9741794c
+Author: Louis Sautier <sautier.louis@gmail.com>
+Date:   Wed Aug 14 11:41:26 2019 +0200
+
+    Comment out non-existent html_static_path in doc (#41)
+    
+    Fixes WARNING: html_static_path entry 'docs/_static' does not exist
+
+commit 248fe6327a5be58f0dd1797f34ecc96217bd2259
+Author: briancurtin <brian@python.org>
+Date:   Mon Aug 12 16:00:20 2019 -0600
+
+    Release 2.0.7
+
+commit dfc347c6ab0c6a6a63c8e20c5ed742a46c445ca8
+Author: Louis Sautier <sautier.louis@gmail.com>
+Date:   Mon Aug 12 23:35:12 2019 +0200
+
+    Include docs in source distributions, fixes #39 (#40)
+
+commit 124062ff34d5e1bccd74fb5b35e3caedc2f00942
+Author: briancurtin <brian@python.org>
+Date:   Wed Sep 26 15:42:16 2018 -0600
+
+    Release 2.0.6
+
+commit 1eae80b48effcbd10e901bcd6d1ce60006c71ed6
+Author: Brian Curtin <brian@python.org>
+Date:   Wed Sep 26 15:40:10 2018 -0600
+
+    Pass args onto DeprecationWarning initializer (#37)
+    
+    If you tried to access the `args` attribute of DeprecatedWarning,
+    which it has via the builtin DeprecationWarning base class, it would
+    show an empty tuple. This change corrects that and passes the arguments
+    on.
+    
+    Fixes #36
+
+commit c9f228e5900f1875ba304f7da57fedf39ecd2dab
+Author: Nicola Soranzo <nicola.soranzo@gmail.com>
+Date:   Mon Jul 9 14:09:02 2018 +0100
+
+    Build universal wheels (#33)
+    
+    See https://packaging.python.org/guides/distributing-packages-using-setuptools/#universal-wheels
+
+commit 1f6af6ea12400b73beecdb136d8509a5e119d832
+Author: briancurtin <brian@python.org>
+Date:   Mon Jul 2 09:30:41 2018 -0400
+
+    Release 2.0.5
+
+commit 51bd04831a3e1b2814b7c4e693f9614d6eeb93fc
+Author: briancurtin <brian@python.org>
+Date:   Mon Jul 2 09:28:32 2018 -0400
+
+    Add comment about nose naming requirement, Issue #32
+
+commit a8148ea3c78c77ce8c1aac150cba8be8c0bae15f
+Author: Radek Lát <radek.lat@gmail.com>
+Date:   Mon Jul 2 13:14:58 2018 +0100
+
+    Fix unit tests hiding in nose by fail_if_not_removed (#31)
+
+commit 70009359c874e84f682b9b4dffadcf6442cd259c
+Author: briancurtin <brian@python.org>
+Date:   Wed Jun 20 11:53:32 2018 -0400
+
+    Release 2.0.4
+
+commit 2c40b6ba0f51e929a1bfcb91b63653d5f5e8e7b1
+Author: Brian Curtin <brian@python.org>
+Date:   Wed Jun 20 11:41:25 2018 -0400
+
+    Move sample.py out of the distribution (#29)
+    
+    sample.py can live inside the docs directory and work fine without being
+    installed. This may require a change on the ReadTheDocs configuration to
+    point it at the included docs-requirements.txt file. This also removes
+    unittest2 from install_requires.
+
+commit 3d0809828a56d22cd83c41b92c151d951c87f39a
+Author: briancurtin <brian@python.org>
+Date:   Fri Jun 8 12:13:30 2018 -0400
+
+    Begin 2.0.4 work
+
+commit 60b616c3b970361c99ef8d00f5f8f530c4827e87
+Author: briancurtin <brian@python.org>
+Date:   Fri Jun 8 12:12:09 2018 -0400
+
+    Release 2.0.3
+
+commit 47c37f0079b2305faedc0876e3dc628d4f5c9051
+Author: Brian Curtin <brian@python.org>
+Date:   Sun May 6 12:12:05 2018 -0400
+
+    Reference the sample module more obviously (#26)
+    
+    Previously, the sample module was hidden in the middle of a paragraph,
+    though if you're reading the section it'll make sense. Since this is a
+    single page and the TOC isn't as helpful there with a separate page,
+    include a reference to the sample module at the very top to catch
+    people's attention more easily.
+
+commit 72bc6fe77c0b2bbbe5e560355d4653b794c2071d
+Merge: f4a068b e0428c6
+Author: briancurtin <brian@python.org>
+Date:   Sun May 6 12:05:33 2018 -0400
+
+    Merge branch 'master' of github.com:briancurtin/deprecation
+
+commit f4a068b35acb0761700c5ce91dada14aacff9206
+Author: Brian Curtin <brian@python.org>
+Date:   Sun May 6 12:03:52 2018 -0400
+
+    Remove Python 3.4 from testing (#25)
+    
+    3.7 is almost out and 3.4 is pretty old. 3.5 or 3.6 seem to be the most
+    common bases in 3.x world anyway.
+
+commit 0829722e584d113bb582ab893ea1c5f9dc92be8d
+Author: briancurtin <brian@python.org>
+Date:   Sun May 6 12:04:50 2018 -0400
+
+    Remove 3.4 from setup as well
+
+commit e0428c690e5597e4d0da8708ac1fc38b6eaf4d5e
+Author: Brian Curtin <brian@python.org>
+Date:   Sun May 6 12:03:52 2018 -0400
+
+    Remove Python 3.4 from testing (#25)
+    
+    3.7 is almost out and 3.4 is pretty old. 3.5 or 3.6 seem to be the most
+    common bases in 3.x world anyway.
+
+commit 80f1db1cf4f86c3fe18420bec1a024377f833f18
+Author: Brian Curtin <brian@python.org>
+Date:   Sun May 6 11:51:07 2018 -0400
+
+    Include sample in installation for proper docs build (#24)
+    
+    * Include sample file in installation
+    
+    In order to properly build the docs, the package is `python setup.py
+    install`'ed on ReadTheDocs, but we weren't including the sample file in
+    the distribution so it wasn't showing up.
+    
+    * Include unittest2 in install_requires
+    
+    In order for the sample file to be properly importable during the
+    `python setup.py install` step of ReadTheDocs, we need to include
+    unittest2.
+
+commit 0c01bfb4db8a21900c86dd75c1027275e1b6cb1b
+Author: Brian Curtin <brian@python.org>
+Date:   Sat May 5 16:28:23 2018 -0400
+
+    Make deprecation.__version__ the source of truth (#23)
+    
+    This change makes deprecation.__version__ the actual source of where
+    versioning comes from, rather than directly in the setup.py file and
+    then being incorrect in both the code and docs. As such, this also
+    updates the docs to get the version from there.
+
+commit e9f47a60d6e65c7d3a81a1113f5be688ae20b4da
+Author: briancurtin <brian@python.org>
+Date:   Sat May 5 15:59:47 2018 -0400
+
+    Fix URLs over length in setup
+
+commit 7019c9cd2edaa672ffbbf2c213aa06e64092d86b
+Author: briancurtin <brian@python.org>
+Date:   Sat May 5 09:45:30 2018 -0400
+
+    Release 2.0.2
+
+commit 2d162242e780acce336d753f7ea09cce7c23c695
+Author: Robert Schütz <rschuetz17@gmail.com>
+Date:   Thu Apr 12 14:52:33 2018 +0200
+
+    Include tests in PyPI tarball (#19)
+
+commit e164ec363a7da36f02c7367137f1d2026cbb7245
+Author: briancurtin <brian@python.org>
+Date:   Tue Apr 10 16:40:24 2018 -0400
+
+    Add links to Github for source and bug tracker
+
+commit a4a2ee08d34edb88e940cc7d0c24dfb8ec27c839
+Author: briancurtin <brian@python.org>
+Date:   Wed Feb 21 09:12:53 2018 -0500
+
+    Release 2.0
+    
+    This introduces a bump to the major version as the docstring format has
+    changed to use Sphinx's `deprecated` directive rather than our own
+    construction of a similar string.
+
+commit e3284761728e019f6d6d67c3c8e97add71dc42ad
+Author: Brian Curtin <brian@python.org>
+Date:   Wed Feb 21 09:11:05 2018 -0500
+
+    Add a docstring for message_location (#16)
+    
+    This change adds an explanation of what message_location can do.
+
+commit bad89dea69a06fd50560f604ddc24167ff19a9b6
+Author: Kai Mühlbauer <kmuehlbauer@users.noreply.github.com>
+Date:   Wed Feb 21 14:50:36 2018 +0100
+
+    Use deprecated-directive in docstring, add message_location (#15)
+    
+    This introduces the use of Sphinx's `deprecated` directive in the docstring message. It retains the usual location of inserting the details at the bottom of the string by default, with a new option in `deprecation.message_location` to insert it at near the top when set to `"top"`.
+
+commit 990b27eacda9c105aba180f727318f6eb97e4d70
+Author: Brian Curtin <brian@python.org>
+Date:   Mon Feb 19 12:04:12 2018 -0500
+
+    Improve warning message handling of None parts (#14)
+    
+    * Improve warning message handling of None parts
+    
+    DeprecationWarning was building strings that could be contained entirely
+    with None values, which made for odd and unhelpful messages. This change
+    builds up the string messages to only contain parts of the sentence when
+    there is relevant data to mention.
+    
+    Fixes #2
+
+commit 3ad94c2de7c313d0ca20a8ce4c9247a0faaa8018
+Author: briancurtin <brian@python.org>
+Date:   Mon Feb 19 09:50:19 2018 -0500
+
+    Release 1.2
+
+commit 40fa8cfdfb2da08dacd80b4d9bd5dc9bad8aff4f
+Author: Brian Curtin <brian@python.org>
+Date:   Mon Feb 19 09:45:47 2018 -0500
+
+    Retain proper indentation of multiline docstrings (#12)
+    
+    * Retain proper indentation of multiline docstrings
+    
+    This change fixes an issue where multiline docstrings would have their
+    body contents indented a level beyond where they should have been,
+    causing potential rendering issues with Sphinx and the REPL's builtin
+    `help` functionality.
+    
+    Rather than blindly joining our deprecation details to the docstring, we
+    now look to see if it's a multiline docstring or not, and if it is, we
+    more carefully append to it. In order to preserve the intended
+    indentation, we split the docstring into its summary line and the rest
+    of the contents, use `textwrap.dedent` on the contents, and then join
+    the summary and contents back up along with the details of the
+    deprecation message so they'll all be on the same level.
+    
+    This includes a change to sample.py with a multiline docstring example,
+    which the docs will render.
+    
+    Fixes #10
+
+commit 7b458d4c647813f28ec3768b7ee9a637886e9214
+Author: Brian Curtin <brian@python.org>
+Date:   Fri Feb 16 09:57:16 2018 -0500
+
+    Update the supported Python versions (#13)
+    
+    Travis was already building with up to the 3.7 development branch, but
+    the local tox.ini and setup.py were behind. This brings them all up to
+    speed.
+
+commit 70bb27fef996b214d7b698ed3124fb598220eea9
+Author: briancurtin <brian@python.org>
+Date:   Thu Feb 1 08:37:36 2018 -0500
+
+    Forgot to bump the version
+
+commit fa0c4090cc8236c959b94d4feb73d3aeeb5b6563
+Merge: bd9d85c cc578e1
+Author: Brian Curtin <brian@python.org>
+Date:   Thu Feb 1 08:30:30 2018 -0500
+
+    Merge pull request #8 from dray92/distutils_to_packaging
+    
+    Migrate from distutils.version to packaging.version
+
+commit cc578e1a7559a10c087c3382cccd7c9a723b4277
+Author: Debosmit Ray <debo@uber.com>
+Date:   Sat Dec 23 05:00:52 2017 +0400
+
+    Migrate from distutils.version to packaging.version
+
+commit bd9d85c97e717cf8af28f2bc4f983f7122adc005
+Merge: 96d01c6 60dbd87
+Author: Brian Curtin <brian@python.org>
+Date:   Mon Sep 4 10:05:49 2017 -0400
+
+    Merge pull request #7 from nicfit/stacklevel
+    
+    Show location of deprecation in warning rather than the decorator
+
+commit 60dbd87854be06116188e7de09c770a56c9d83fe
+Author: Travis Shirk <travis@pobox.com>
+Date:   Sat Sep 2 22:42:05 2017 -0600
+
+    Show location of deprecation in warning rather than the decorator internals.
+
+commit 96d01c64c7f601be4c0e244bfbc9727938e11b9c
+Author: briancurtin <brian@python.org>
+Date:   Tue May 2 11:42:21 2017 -0400
+
+    Release 1.0.1
+
+commit 0fff0c02988ff6ab16ada90ba75a6577c6378cfd
+Merge: ee2c590 b8043fb
+Author: Brian Curtin <brian@python.org>
+Date:   Tue May 2 11:39:16 2017 -0400
+
+    Merge pull request #6 from toabctl/fix-encoding
+    
+    Fix encoding when reading README.rst
+
+commit ee2c590ee906f1d5f723d0603b5694a675378f70
+Merge: 6f27aaa 4d5dc0d
+Author: Brian Curtin <brian@python.org>
+Date:   Tue May 2 11:35:07 2017 -0400
+
+    Merge pull request #3 from javierpena/master
+    
+    Include LICENSE file in sdist
+
+commit b8043fb620271a229d91dff302079f19876d7838
+Author: Thomas Bechtold <tbechtold@suse.com>
+Date:   Tue May 2 16:28:57 2017 +0200
+
+    Fix encoding when reading README.rst
+    
+    Closes #5
+
+commit 4d5dc0dc577cfe8932bdc8efbace4a61098a5b5c
+Author: Javier Pena <jpena@redhat.com>
+Date:   Wed Feb 15 14:27:40 2017 +0100
+
+    Include LICENSE file in sdist
+    
+    Most distributions require license files to be included in source
+    tarballs, e.g. [1].
+    
+    [1] https://fedoraproject.org/wiki/Packaging:LicensingGuidelines#License_Text
+
+commit 6f27aaad7de77f5bbf804da82f08d39b78a139e6
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Mon Jan 23 09:11:05 2017 -0500
+
+    Rename the package to 'deprecation'
+
+commit 6f03760ac0af604fe2c12da2a308bc67615ec709
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Tue Jan 17 17:45:11 2017 -0500
+
+    Remove pytest as we don't use it
+
+commit e95722280de2b1dd49e67f6868186fd7c6660bfb
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Tue Jan 17 10:33:20 2017 -0500
+
+    Rename the package to libdeprecation
+    
+    This addresses #1
+
+commit c25b78e8e07139328863491c48c262c248406c5d
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 17:47:09 2017 -0500
+
+    Add codecov badge
+
+commit c413046c6a4f796be0b014be1c344c2d1f4ac8e5
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 17:42:36 2017 -0500
+
+    Try codecov
+
+commit f1409f63ce7f85301d6c9bd948e2c4dd3202cec2
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 17:32:21 2017 -0500
+
+    Add coverage support to tox
+
+commit 83f6d6bdf383356658f77f1ce107f40487ca7dbf
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 12:14:33 2017 -0500
+
+    Test on pypy and pypy3
+
+commit 293120cc1160b764a1b3102faffb9c7a8d47eda3
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 12:11:59 2017 -0500
+
+    Add Travis badge and show 3.6 support
+
+commit 271c1302b425e09480c594117fe5231940868e8e
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 12:07:47 2017 -0500
+
+    Unindent blocks one level so they look normal
+
+commit e7e06556463aa26c10cfe459d883e7406c344702
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 12:04:05 2017 -0500
+
+    Add Travis config
+
+commit c318584e9999f2d3a1e44507e6ae86fb98ca93ed
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 11:58:09 2017 -0500
+
+    Add RTD linking
+
+commit decc2a6cdc4098d64c710bf6654f45a437b8e5cc
+Author: briancurtin <brian.curtin@rackspace.com>
+Date:   Sat Jan 14 11:40:27 2017 -0500
+
+    Mostly done with 1.0
+
+commit be2ee732d4a716780822c06a34a54f6aa45bc080
+Author: Brian Curtin <brian@python.org>
+Date:   Thu Jan 12 12:51:51 2017 -0500
+
+    Initial commit

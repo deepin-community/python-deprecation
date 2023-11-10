@@ -1,0 +1,10 @@
+Bug-Submit: https://github.com/briancurtin/deprecation/issues/new
+Reference:
+  Author: Brian Curtin
+  Title: "deprecation: A library to handle automated deprecations."
+  Year: 2017
+  Type: manual
+  URL: http://deprecation.readthedocs.io/en/latest/
+Repository: https://github.com/briancurtin/deprecation.git
+Repository-Browse: https://github.com/briancurtin/deprecation
+Bug-Database: https://github.com/briancurtin/deprecation/issues

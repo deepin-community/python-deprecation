@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+
+import deprecation
+
+@deprecation.deprecated(deprecated_in="1.0", current_version="2.0")
+def _deprecated_method():
+    return "ok"
+
+def test_DeprecatedWarning_doesnt_fail():
+    @deprecation.fail_if_not_removed
+    def fn():
+        _deprecated_method()
+
+    try:
+        fn()
+    except AssertionError as error:
+        raise error("A DeprecatedWarning shouldn't cause a failure")
+
+test_DeprecatedWarning_doesnt_fail()
